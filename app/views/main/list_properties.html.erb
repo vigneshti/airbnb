@@ -1,0 +1,71 @@
+
+<div> 
+	<div class="alert alert-info">
+	  <h5>Info! Click the Text filed in the map to take a view of your place </h5>
+	</div>
+
+<input id="pac-input" class="controls" type="text"
+         value = "<%=  @search_params['country'] %>" />
+
+    <div id="map-canvas"></div>
+</div>
+
+<br />
+
+<div>     
+	<% if @properties.present? %>                    
+	
+			<table class="table table-striped">
+				<tr>
+					<td> Place </td>
+					<td> Room Type </td>
+					<td> Room Name </td>
+					<td> Price </td>
+					<td> Check In </td>
+					<td> Check Out </td>
+					<td> Book </td>
+				</tr>
+		<% @properties.each do |p| %>
+		
+			<% unless @hash[p.id]%>
+
+			  <% form_for @booking, :url => { :action => "create", :controller=>"booking" } do |f| %>
+			  	
+			  	    <tr>
+		       			  <td><div>
+						  	<%= f.text_field :b_place, :value => p.place%>
+						  </div></td>
+						  <td> <%= p.r_type %>  </td>
+						  <td> <%= p.r_name %>  </td> 
+						  <td> <%= p.price %>   </td>
+						  <td><div><%= f.text_field :b_cin, :value => @search_params['checkin'], :read_only => true%></div> </td>
+						  <td><div>
+						  	<%= f.text_field :b_cout, :value => @search_params['checkout'], :read_only => true%>
+						  </div></td>
+						
+						  <%= hidden_field_tag :prop_id, p.id%>
+						  <% if signed_in? %>
+						  		<td><%= f.submit "Book" %></td>
+						  <% else %>
+									<td> You must be signed in to book this place </td>
+						  <% end %>
+				    </tr>
+				
+			 <% end %> 
+			
+			<%end%>
+
+		<% end %>
+		 </table> 
+
+    
+
+    <% else %>
+
+    	<div class="alert alert-error">
+			<h4> Sorry, No matches Found </h4>
+		</div>
+
+    <% end %>                    
+</div>
+

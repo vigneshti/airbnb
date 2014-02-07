@@ -1,0 +1,40 @@
+<header>
+<div class="mainclass">
+
+</div>
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+         <div class="logoclass">
+           <%= image_tag("airbnb_logo.png") %>
+        </div>
+        <div id="locationField" class="searchbar">
+         
+        </div>
+          <div class="nav-collapse collapse">
+             <nav class="spacingg">
+             <ul>
+                  <li class="floating"><%= link_to "Home", new_main_path %></li>
+                  <% if !signed_in? %>
+                     <li class="floating"><%= link_to "sign up", signup_path %></li>
+                  <% end %>
+                  <% if signed_in? %>
+                     <li class="floating"><%= link_to "Profile", profile_path %></li>
+                  <% end %>
+                  <li class="floating"><%= link_to "help", help_path %></li>
+                  <% if signed_in? %>
+                      <li class="floating"><%= link_to "Post your place", posturplace_path %></li>
+                      <li class="floating"><%= link_to "Dashboard", my_properties_path %></li>
+                      <li class="floating"><%= link_to "Sign out", signout_path %> </li>
+                  <% else %>
+                     <li class="floating"><%= link_to "sign in", signin_path %></li>
+                  <% end %>
+          </ul>
+           </nav>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+</header>

@@ -1,0 +1,48 @@
+<div class="pos">
+<div class="container">
+
+<div class="alg">	
+	<div class="row-fluid">
+			<div class="span4"><b>Email:</b></div>
+			<div class="span8"><%=h @user.email %></div>
+	</div>
+</div>
+<div class="alg">	
+	<div class="row-fluid">
+			<div class="span4"><b>Login count:</b></div>
+			<div class="span8"><%=h @user.login_count %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+			<div class="span4"><b>Last request at:</b></div>
+			<div class="span8"><%=h @user.last_request_at %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+			<div class="span4"><b>Last login at:</b></div>
+			<div class="span8"><%=h @user.last_login_at %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+			<div class="span4"><b>Current login at:</b></div>
+			<div class="span8"><%=h @user.current_login_at %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+			<div class="span4"><b>Last login ip:</b></div>
+			<div class="span8"><%=h @user.last_login_ip %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+			<div class="span4"><b>Current login ip:</b></div>
+			<div class="span8"><%=h @user.current_login_ip %></div>
+	</div>
+</div>
+</div>
+</div>
+<!--%= link_to 'Edit Account', edit_account_path %-->

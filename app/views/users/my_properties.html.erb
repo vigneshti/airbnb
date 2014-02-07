@@ -1,0 +1,56 @@
+<div class="propery">
+	<div class="alert alert-info">
+		<h4> My Posted Properties Details </h4>
+	</div>
+	<table class="table table-striped">
+		<tr>
+					<td> Property Place </td>
+					<td> Room Name </td>
+					<td> Room Type </td>
+					<td> Available From </td>
+					<td> Available Upto </td>
+					<td> Price/Day </td>
+					<td> Max Guest </td>
+					<td> Booked By </td>
+					<td> Booked From </td>
+					<td> Booked Upto </td>
+		</tr>
+		<% @current_user_properties.each do |prop| %>
+		<tr>
+				<td> <%= prop.place %> </td>
+				<td> <%= prop.r_name %> </td>
+				<td> <%= prop.r_type %> </td>
+				<td> <%= prop.ch_in %> </td>
+				<td> <%= prop.ch_out %> </td>
+				<td> <%= prop.price %> </td>
+				<td> <%= prop.guestcnt %> </td>
+				<% prop.booked_users.each do |users| %>
+						<td><%= users.name %></td>
+				<% end%>
+				<% prop.bookings.each do |posted_property_details| %>
+					<td><%= posted_property_details.b_cin %></td>
+					<td><%= posted_property_details.b_cout %></td>
+				<%end%>
+					 
+		<% end %>
+	</table>
+	<div class="alert alert-success">
+		<h4> My Booked Details </h4>
+	</div>
+	<table class="table table-striped">
+		<tr>
+					<td> Booked Property Name </td>
+					<td> Booked Property Owned By </td>
+					<td> Booked From </td>
+					<td> Booked Upto </td>
+		</tr>
+		<% @current_user_booked_properties.each_with_index do |booked_prop,index| %>
+			<tr>
+				<td> <%= booked_prop.place %></td>
+				<td><%= booked_prop.user.name %></td>
+				<td><%= current_user.bookings[index].b_cin %></td>
+				<td><%= current_user.bookings[index].b_cout %></td>
+			</tr>
+		<%end%>
+	</table>
+</div>

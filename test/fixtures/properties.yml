@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  place: MyString
+  r_name: MyString
+  r_type: MyString
+  ch_in: MyString
+  ch_out: MyString
+  price: MyString
+  guestcnt: MyString
+
+two:
+  place: MyString
+  r_name: MyString
+  r_type: MyString
+  ch_in: MyString
+  ch_out: MyString
+  price: MyString
+  guestcnt: MyString

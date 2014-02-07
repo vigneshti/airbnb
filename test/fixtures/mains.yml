@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  booking: MyString
+  chckin: MyString
+  chckout: MyString
+  selbox: MyString
+
+two:
+  booking: MyString
+  chckin: MyString
+  chckout: MyString
+  selbox: MyString

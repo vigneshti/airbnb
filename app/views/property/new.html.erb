@@ -1,0 +1,67 @@
+<div class="imgset">
+    <div class="container">
+      <div class="pos">
+          <div class="alg">
+
+          </div>
+
+          <div class="row-fluid">
+       
+            <div class="span8"><h1>POST YOUR PROPERTY</h1> </div>
+          </div>
+          <% form_for @property, :as => :property, :url => { :action => "create" } do |f| %>
+
+            <div class="alg">
+            </div>
+            <div class="row-fluid">           
+                <div class="span4"><label><b>PLACE</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_place" placeholder="Enter the country" name="property[place]" type="text"> </div>    
+            </div>
+             <div class="alg">
+            </div>
+            <div class="row-fluid"> 
+                <div class="span4"><label><b>ROOM NAME</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_r_name" placeholder="Enter the room name" name="property[r_name]" type="text"></div>
+            </div>
+            <div class="alg">
+            </div>
+            <div class="row-fluid">   
+                <div class="span4"><label><b>ROOM TYPE</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_r_type" placeholder="single/shared/full" name="property[r_type]" type="text"></div>
+            </div>
+            <div class="alg">
+            </div>
+            <div class="row-fluid">
+                <div class="span4"><label><b>AVAILABLE FROM</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_ch_in" name="property[ch_in]" type="date" onblur="ch1()" ></div>
+            </div>
+            <div class="alg">
+            </div>
+            <div class="row-fluid">
+                <div class="span4"><label><b>AVAILABLE UPTO</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_ch_out" name="property[ch_out]" type="date" onblur="ch2()"></div>
+            </div>
+            <div class="alg">
+            </div>
+            <div class="row-fluid">
+                <div class="span4"><label><b>PRICE PER DAY</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_price" name="property[price]" placeholder="price per day in Rupees" type="text"></div>
+            </div>
+            
+            <div class="alg">
+            </div>
+            <div class="row-fluid">
+                <div class="span4"><label><b>MAX GUEST COUNT</b></label></div>
+                <div class="span8"><input class="col-lg-4" id="property_guestcnt" name="property[guestcnt]" placeholder="max guest count" type="text"></div>
+            </div>
+            <div class="alg">
+            </div>
+            <div class="row-fluid">
+                 <div class="span3"></div>
+                 <div class="span8"><input class="btn btn-default" id="property_submit" name="commit" type="submit" value="Submit"></div>
+            </div>
+
+          <% end %>
+     </div>
+   </div>
+</div>

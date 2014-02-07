@@ -1,0 +1,32 @@
+	<%= render "shared/error_messages", :target => @user %>
+<div class="alg">
+	<div class="row-fluid">
+		<div class="span4"><%= form.label :name %></div>
+		<div class="span8"><%= form.text_field :name %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+		<div class="span4"><%= form.label :login %></div>
+		<div class="span8"><%= form.text_field :login %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+		<div class="span4"><%= form.label :email %></div>
+		<div class="span8"><%= form.text_field :email %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+		<div class="span4"><%= form.label :password, form.object.new_record? ? nil : "Change password" %></div>
+		<div class="span8"><%= form.password_field :password %></div>
+	</div>
+</div>
+<div class="alg">
+	<div class="row-fluid">
+		<div class="span4"><%= form.label :password_confirmation %></div>
+		<div class="span8"><%= form.password_field :password_confirmation %></div>
+	</div>
+</div>
+	
