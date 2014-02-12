@@ -6,3 +6,4 @@ gem "mysql2", "~> 0.2.7", :platforms => :ruby_19
 gem "authlogic", "2.1.6"
 gem 'debugger', "1.6.2"
 gem 'ruby-debug', "~> 0.10.4"
+gem 'shelly-dependencies'
